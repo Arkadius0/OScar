@@ -1,0 +1,9 @@
+Build/
+Debug/
+Release/
+.pio/
+*.o
+*.d
+*.elf
+*.bin
+*.map

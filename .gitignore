@@ -1,0 +1,11 @@
+#ESP32 build directory
+esp32/build/
+#STM32 IDE generated files 
+*.o
+*.d
+*.su
+*.ioc.bak
+.DS_Store
+EOF
+
+EOF
