@@ -23,7 +23,8 @@ void Motor_SetSpeed(MOTOR_t* motor, int16_t speed) {
         // Stop the motor
         Motor_Stop(motor);
     }
-    uint32_t pwm = speed > 0 ? speed : -speed;
+    uint32_t max_pwm = motor->htim->Init.Period; //value ARR 7199
+    uint32_t pwm = (abs(speed) * max_pwm) / 1000; // convert 0..1000 to 0..max_pwm
     __HAL_TIM_SET_COMPARE(motor->htim, motor->channel, pwm); // Set PWM duty cycle based on absolute speed value
 }
 

@@ -154,16 +154,7 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-	  for(uint16_t i=0; i<=1000; i+=100){
-		  Motor_SetSpeed(&motor_left, i);
-		  Motor_SetSpeed(&motor_right, i);
-		  HAL_Delay(10);
-		  target_speed_left = Encoder_GetTicks(&encoder_left);
-		  target_speed_right = Encoder_GetTicks(&encoder_right);
-		  HAL_Delay(1000);
-	  }
 
-	  if(data_flag) data_flag=0;
     /* USER CODE BEGIN 3 */
 
 
